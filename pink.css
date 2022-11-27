@@ -1,0 +1,19 @@
+.story-section .story-item i,
+.event-section .event-item-inner span,
+.story-section .story-text h3,
+.couple-section .couple i.bi-heart-fill,
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+  color: #fb839e;
+}
+.event-section .event-item-inner ::before,
+.couple-section .couple img {
+  border-color: #f3708e;
+}
+.couple-section .couple h3 {
+  color: #fc3b68;
+}
+
+.event-section {
+  background-color: #fb839e;
+}
