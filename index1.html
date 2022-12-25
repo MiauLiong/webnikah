@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
+     <!-- Required meta tags -->
+     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
@@ -62,8 +64,9 @@
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
               <span>9 Des 2022</span>
+              <p style="font-size: 20px; margin-top: 15px;" id="waktuacara1"></p>
               <br />
-              <span class="buka-undangan" data-target="buka-undangan" onclick="mulai()" style="font-size: 26px"><a href="#couple" style="text-decoration: none; color:white;">Buka Undangan</a></span>
+              <span class="buka-undangan" data-target="buka-undangan"  onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color:white;" >Buka Undangan</a></span>
             </div>
           </div>
         </div>
@@ -77,8 +80,9 @@
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
               <span>9 Des 2022</span>
+              <p style="font-size: 20px; margin-top: 15px;" id="waktuacara2"></p>
               <br />
-              <span class="buka-undangan" onclick="mulai()" style="font-size: 26px"><a href="#couple" style="text-decoration: none; color:white;">Buka Undangan</a></span>
+              <span class="buka-undangan" data-target="buka-undangan"  onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color:white;">Buka Undangan</a></span>
             </div>
           </div>
         </div>
@@ -92,8 +96,9 @@
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
               <span>9 Des 2022</span>
+              <p style="font-size: 20px; margin-top: 15px;" id="waktuacara3"></p>
               <br />
-              <span class="buka-undangan" onclick="mulai()" style="font-size: 26px"><a href="#couple" style="text-decoration: none; color:white;">Buka Undangan</a></span>
+              <span class="buka-undangan" data-target="buka-undangan"   onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color:white;" >Buka Undangan</a></span>
             </div>
           </div>
         </div>
@@ -462,6 +467,8 @@
   <p class="copyright-text">Created with love by C.M.L | Copyright &copy; 28 November 2022</p>
   <!-- copyright end -->
 </div>
+<!-- bootstrap script  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <!-- AOS  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -511,7 +518,15 @@
       var musik = "musik/lagu.mp3";
 
     </script>
- <script> var audio = document.querySelector(".audio "); if(musik) {audio.src = musik;} function mulai() { audio.play(); document.querySelector(".open").style = "opacity: 0;"; document.querySelector(".body").style = "overflow-y: scroll;"; setTimeout(function () { document.querySelector(".open").style.display = "none"; }, 1000); } function wa(isi) { window.open("https://api.whatsapp.com/send?text= Makasih koko yang paling baik hati dan rendah hati, serta tidak sombong kwowko, udah ucapin ulang tahun aku, di hari spesial ini aku pengin " + isi); } async function tanya() { var { value: kado } = await swal.fire({ title: "Di hari spesial ini kamu pengin nya apa?", input: "text", showCancelButton: false, }); if (kado) { await swal.fire("Kirim jawabannya ke wa aku ya"); wa(kado); } else { await swal.fire("Jangan dikosongin dong"); tanya(); } } </script> <p class="wm"><span> 
+ <script> 
+ var audio = document.querySelector(".audio ");
+  if(musik) 
+  { audio.src = musik;} 
+  function mulai() {
+     audio.play(); 
+     document.querySelector(".open").style = "opacity: 0;"; 
+     document.querySelector(".body").style = "overflow-y: scroll;"; 
+ }  </script>
  
  </body>
 </html>
