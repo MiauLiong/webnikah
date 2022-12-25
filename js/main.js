@@ -20,7 +20,7 @@ $(document).ready(function () {
 });
 
 // program hitung mundur
-const tanggalTujuan = new Date("Dec 25, 2022 22:00:00").getTime();
+const tanggalTujuan = new Date("Dec 9, 2027 08:00:00").getTime();
 
 const hitungMundur = setInterval(function () {
   const sekarang = new Date().getTime();
