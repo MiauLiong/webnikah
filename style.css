@@ -1,20 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
-  margin: o;
+  margin: 0;
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
   background-color: #f3f2f1;
 }
+*:not(1) {
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 ::before,
 ::after {
   box-sizing: border-box;
@@ -24,26 +31,29 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+
 .container {
   max-width: 1140px;
   margin: auto;
 }
+
 header,
 section,
 footer {
   display: block;
   width: 100%;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-.justify-content-between {
   justify-content: space-between;
 }
+
 .justify-content-center {
   justify-content: center;
 }
+
 .align-items-center {
   align-items: center;
 }
@@ -64,58 +74,115 @@ footer {
   text-transform: capitalize;
 }
 /* header */
-.navbar {
+.header {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 99;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #fc3baf;
-  box-shadow: 0 0 13px rgb(81, 81, 81);
+  transition: all 0.5s ease;
+}
+.header.fixed {
+  background-color: #fff;
+  box-shadow: 0 0 8px #cccccc;
 }
 
-.navbar .navbar-brand {
-  padding: 0 15px;
+.header .logo {
+  padding: 10px;
 }
-.navbar .navbar-brand {
+
+.header .logo a {
   font-size: 30px;
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-family: "Great Vibes", cursive;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: all 0.5 ease;
 }
 
-.navbar .collapse {
+.header.fixed .logo a {
+  color: #000;
+}
+
+.header .hamburger-btn {
+  margin: 10px;
+  display: inline-block;
+  height: 34px;
+  width: 40px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  display: none;
+}
+.header.fixed .hamburger-btn {
+  border-color: #000;
+  background-color: #000;
+}
+.header .hamburger-btn span {
+  display: block;
+  height: 1px;
+  width: 16px;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.header .hamburger-btn span::before,
+.header .hamburger-btn span::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+}
+
+.header .hamburger-btn span::before {
+  top: -6px;
+}
+.header .hamburger-btn span::after {
+  top: 6px;
+}
+
+.header .nav {
   padding: 0 15px;
 }
 
-.navbar .collapse ul {
+.header .nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
-.navbar .collapse ul li {
+
+.header .nav ul li {
   display: inline-block;
   margin-left: 30px;
 }
-.navbar .collapse ul li a:hover {
-  font-weight: bold;
-  font-size: 18px;
-}
-.navbar .collapse ul li a {
+
+.header .nav ul li a {
   display: block;
-  padding: 25px 0;
-  color: white;
+  padding: 15px 0;
+  color: #fff;
   font-size: 15px;
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.5s ease;
 }
+
+.header.fixed .nav ul li a {
+  color: #555555;
+}
+
 /* home section */
 .home-section {
   min-height: 100vh;
-  position: relative;
+  width: 100%;
 }
 .home-section .slide {
   background-position: center;
@@ -133,7 +200,6 @@ footer {
 .home-section .slide.active {
   opacity: 1;
   visibility: visible;
-  margin-top: 3%;
 }
 
 .home-section .slide::before {
@@ -197,7 +263,10 @@ footer {
   margin: 15px 0 0;
 }
 
-.home-section .slide.active .home-content span {
+.home-section .slide.active .home-content span,
+.home-section .slide.active .home-content #waktuacara1,
+.home-section .slide.active .home-content #waktuacara2,
+.home-section .slide.active .home-content #waktuacara3 {
   opacity: 0;
   animation: fadeInTop 1.7s ease forwards;
   animation-delay: 1s;
@@ -291,7 +360,7 @@ footer {
   top: 5px;
   width: 31px;
   text-align: center;
-  background-color: white;
+  background-color: transparent;
   padding: 5px;
   font-size: 18px;
 }
@@ -642,6 +711,7 @@ footer {
   justify-content: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .footer .footer-content .couple-name img {
   position: absolute;

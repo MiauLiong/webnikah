@@ -1,27 +1,50 @@
 @media (min-width: 768px) {
-  /* .navbar{
-        display: block!important;
-    } */
+  .header .nav {
+    display: block;
+  }
 }
 @media (max-width: 991px) {
   .event-section .event-item {
     flex: 0 0 50%;
     max-width: 50%;
   }
+  .header .nav {
+    margin: auto;
+  }
 }
 @media (max-width: 767px) {
-  /* .navbar-brand {
+  .header .logo {
     padding: 8px 15px;
   }
-  .navbar {
+  .header .hamburger-btn {
+    display: flex;
+    margin-right: 15px;
+  }
+  .header .nav {
     flex: 0 0 100%;
     max-width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    display: none;
   }
-  .navbar ul li {
+  .header .nav ul li {
     display: block;
     margin-left: 0;
   }
-   */
+  .header .nav ul li a {
+    color: #555;
+    padding: 10px 0;
+  }
+
+  .navbar .nav {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-content {
+    margin: 0;
+    padding: 0;
+  }
 
   .home-section .home-content h1 {
     font-size: 60px;
@@ -69,19 +92,29 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .story-section .story-item:nth-child(odd) .story-text {
-    padding: 0 15px 0 50px;
+    padding: 0 15px 0 60px;
     text-align: left;
   }
   .story-section .story-item:nth-child(even) .story-img {
-    padding: 0 15px 0 50px;
+    padding: 0 15px 0 60px;
   }
-  .story-section .story-item:nth-child(od) .story-img {
+  .story-section .story-item:nth-child(odd) .story-img {
     padding: 0 15px 0 50px;
   }
 }
 @media (max-width: 574px) {
+  .navbar,
+  .home-section {
+    width: 100%;
+  }
   .home-section .home-content h1 {
     font-size: 40px;
   }
+  .footer .footer-content .couple-name {
+    width: 270px;
+    height: 270px;
+  }
 }
+/* menit 36.19 */
