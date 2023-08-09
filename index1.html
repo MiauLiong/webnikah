@@ -54,7 +54,7 @@
             <div class="home-content">
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
-              <span>9 Des 2022</span>
+              <span>9 Des 2027</span>
               <p style="font-size: 20px; margin-top: 15px" id="waktuacara1"></p>
               <br />
               <span class="buka-undangan" data-target="buka-undangan" onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color: white">Buka Undangan</a></span>
@@ -70,7 +70,7 @@
             <div class="home-content">
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
-              <span>9 Des 2022</span>
+              <span>9 Des 2027</span>
               <p style="font-size: 20px; margin-top: 15px" id="waktuacara2"></p>
               <br />
               <span class="buka-undangan" data-target="buka-undangan" onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color: white">Buka Undangan</a></span>
@@ -86,7 +86,7 @@
             <div class="home-content">
               <p>Kami Akan Menikah</p>
               <h1>Jack & Rose</h1>
-              <span>9 Des 2022</span>
+              <span>9 Des 2027</span>
               <p style="font-size: 20px; margin-top: 15px" id="waktuacara3"></p>
               <br />
               <span class="buka-undangan" data-target="buka-undangan" onclick="mulai()" style="font-size: 20px"><a href="#couple" style="text-decoration: none; color: white">Buka Undangan</a></span>
@@ -521,5 +521,19 @@
         document.querySelector(".body").style = "overflow-y: scroll;";
       }
     </script>
+    <!-- ubah tampilan memenuhi layar -->
+    <script>
+      window.addEventListener("load", function() {
+        var screenWidth = window.innerWidth;
+      
+        if (screenWidth < 767) {
+          // Ubah tata letak elemen-elemen di menu home-section dan couple-section
+          // sesuai dengan perubahan yang diinginkan
+          // Contoh: menetapkan lebar elemen menjadi 100%
+        
+        }
+      });
+      </script>
+      
   </body>
 </html>

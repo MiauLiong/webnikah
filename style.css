@@ -13,7 +13,7 @@ body {
 }
 
 * {
-  margin: 0;
+  margin: 1px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -197,6 +197,7 @@ footer {
   visibility: hidden;
   transition: all 1s ease-in-out;
 }
+
 .home-section .slide.active {
   opacity: 1;
   visibility: visible;

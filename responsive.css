@@ -2,6 +2,9 @@
   .header .nav {
     display: block;
   }
+  .header ul li a {
+    font-size: 16px;
+  }
 }
 @media (max-width: 991px) {
   .event-section .event-item {
@@ -11,8 +14,17 @@
   .header .nav {
     margin: auto;
   }
+  .home-section {
+    width: 100%;
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 777px) {
+  .container {
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
   .header .logo {
     padding: 8px 15px;
   }
@@ -117,4 +129,3 @@
     height: 270px;
   }
 }
-/* menit 36.19 */
